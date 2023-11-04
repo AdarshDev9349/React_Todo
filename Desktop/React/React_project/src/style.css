@@ -1,0 +1,134 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+
+
+body{
+    padding-top: 50px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgb(28, 165, 165);
+}
+.task-Form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+.task-Form label{
+    font-weight: 530;
+    font-size: larger;
+}
+.task-Form input {
+    outline: none;
+    border: 1px solid hsl(200, 100%, 40%);
+    background: rgb(142, 238, 174);
+    border-radius: 0.25em;
+  
+    color: hsl(0, 0%, 0%);
+    padding: 6px;
+  }
+  
+.task-Form input:focus {
+    border: 1px solid hsl(200, 100%, 70%);
+  }
+  
+.task-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .header {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+.task-list {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+.task-list li:has(input:checked) label {
+    color: hsl(200, 20%, 40%);
+  }
+  
+
+.task-list li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+.task-list li label {
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+.task-list li:has(input:focus-visible) label {
+    outline: 1px solid hsl(200, 100%, 50%);
+  }
+  
+.task-list li input {
+    outline: none;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+  }
+  
+.task-list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: hsl(200, 100%, 90%);
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.task-list li label:hover::before {
+    background: hsl(200, 100%, 80%);
+  }
+  
+.task-list li:has(input:checked) label::before {
+    content: "✔";
+    background: hsl(200, 100%, 40%);
+    color: hsl(200, 100%, 90%);
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+.task-list li:has(input:checked) label:hover::before {
+    background: hsl(200, 100%, 30%);
+  }
+.btn {
+    background: blanchedalmond;
+    border: 1px solid hsl(200, 100%, 50%);
+    color: hsl(0, 0%, 0%);
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    outline: none;
+  }
+  
+.btn:hover,
+.btn:focus-visible {
+    background:burlywood;
+  }
+  
+.btn2 { 
+
+    background-color: rgb(182, 21, 21);
+    color: rgb(162, 252, 255);
+}
